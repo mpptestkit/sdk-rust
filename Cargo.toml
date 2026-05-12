@@ -1,0 +1,25 @@
+[package]
+name = "mpp-test-sdk"
+version = "1.0.0"
+edition = "2021"
+description = "Rust SDK for the Machine Payments Protocol (MPP) — HTTP 402 payment flow on Solana"
+license = "MIT"
+repository = "https://github.com/mpptestkit/sdk-rust"
+homepage = "https://mpptestkit.com"
+keywords = ["solana", "http402", "payments", "blockchain", "mpp"]
+categories = ["network-programming", "web-programming", "cryptography"]
+readme = "README.md"
+
+[dependencies]
+reqwest    = { version = "0.12", features = ["json"] }
+serde      = { version = "1",    features = ["derive"] }
+serde_json = "1"
+tokio      = { version = "1",    features = ["time", "sync"] }
+ed25519-dalek = { version = "2", features = ["rand_core"] }
+rand       = "0.8"
+base64     = "0.22"
+num-bigint = "0.4"
+num-traits = "0.2"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
